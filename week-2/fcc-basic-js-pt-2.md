@@ -208,33 +208,123 @@ var myStorage = {
 
 var gloveBoxContents = myStorage.car.inside["glove box"];
 ```
-## 13.
+## 13.Accessing Nested Arrays
 
 ```js
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+var secondTree = myPlants[1].list[1]; 
 ```
-## 14.
+## 14.Record Collection
 
 ```js
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [ 
+        "Let It Rock", 
+        "You Give Love a Bad Name" 
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [ 
+        "1999", 
+        "Little Red Corvette" 
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+var collectionCopy = JSON.parse(JSON.stringify(collection))
+
+function updateRecords(id, prop, value) {
+  if (prop === "tracks" && value !== "") {
+   if(collection[id][prop]) {
+    collection[id][prop].push(value);
+   }
+   else {
+    collection[id][prop]=[value];
+   }
+  } else if (value !== "") {
+    collection[id][prop] = value;
+  } else {
+    delete collection[id][prop];
+  }
+  
+  
+  return collection;
+}
+
+updateRecords(5439, "artist", "ABBA");
 ```
-## 15.
+## 15.Iterate with JavaScript While Loops
 
 ```js
+var myArray = [];
+
+var a = 0;
+while(a<5){
+myArray.push(a);
+a++;
+}
 ```
-## 16.
+## 16. Iterate with JavaScript For Loops
 
-```js
 ```
-## 17.
-
-```js
+var myArray = [];
+for (var a = 1; a <= 5; a++){
+    myArray.push(a);
+}
 ```
-## 18.
+## 17.Iterate Odd Numbers With a For Loop
 
 ```js
+var myArray = [];
+
+for(var a=1; a<=9; a +=2){
+  myArray.push(a);
+}
+
 ```
-## 19.
+## 18.Count Backwards With a For Loop
 
 ```js
+var myArray = [];
+
+for(var a=9; a>0; a -= 2){
+myArray.push(a);
+}
+
+```
+## 19.Iterate Through an Array with a For Loop
+
+```js
+
 ```
 ## 20.
 
