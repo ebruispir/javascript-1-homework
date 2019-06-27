@@ -24,6 +24,7 @@ SyntaxError: Unexpected token =
 classification:
 * creation phase or execution phase 
 * syntax
+
 the fix:
 ```js
 const a = 5;
@@ -49,6 +50,7 @@ TypeError: Assignment to constant variable.
 classification:
 * creation phase or execution phase 
 * syntax 
+
 the fix:
 ```js
 var a = 9;
