@@ -23,7 +23,7 @@ SyntaxError: Unexpected token ;
 ```
 classification:
 * creation phase 
-* syntax or semanitc 
+* syntax  
 
 the fix:
 ```js
@@ -47,7 +47,7 @@ SyntaxError: Unexpected number
 ```
 classification:
 * creation phase
-* syntax or semanitc 
+* syntax 
 
 the fix:
 ```js
@@ -75,7 +75,7 @@ TypeError: Cannot read property '9' of undefined
 ```
 classification:
 * creation phase
-* syntax 
+* semanitc 
 
 the fix:
 ```js
