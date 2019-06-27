@@ -3,10 +3,10 @@
 |  | your Emoji | your comments | coach emoji | coach comments |
 | --- | --- | --- | --- | --- |
 | :seedling: __[fcc: finish js basics](./fcc-basic-js-pt-2.md) |:white_check_mark:| | | |
-| :dash: __[janke: tracing conditionals](./jl-tracing-conditionals.md) | | | | |
+| :dash: __[janke: tracing conditionals](./jl-tracing-conditionals.md) |:wavy_dash: | | | |
 | :seedling: __[javascript.info: loops](./jsinfo-loops.md) | | | | |
 | :dash: __[janke: loop refactors](./jl-loop-refactors.md) | | | | |
-| :seedling: __[fcc: data structures](./fcc-data-structures.md) | :wavy_dash:  | | | |
+| :seedling: __[fcc: data structures](./fcc-data-structures.md) | | | | |
 | :seedling: __[janke: errors const](./jl-errors-const.md) | | | | |
 | :seedling: __[janke: errors arrays](./jl-errors-arrays.md) | | | | |
 | :seedling: __[janke: errors objects](./jl-errors-objects.md) | | | | |
