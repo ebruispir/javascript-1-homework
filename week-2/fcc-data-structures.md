@@ -202,11 +202,10 @@ let users = {
 
 function isEveryoneHere(obj) {
  
-  if(users.hasOwnProperty('Alan','Jeff','Sarah','Ryan')) {
+ if(users.hasOwnProperty('Alan','Jeff','Sarah','Ryan')) {
     return true;
   }
   return false;
-}
 }
 console.log(isEveryoneHere(users));
 ```
