@@ -19,15 +19,16 @@ const = 5;
 ```
 error message:
 ```js
+SyntaxError: Unexpected token =
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
-
+* creation phase or execution phase 
+* syntax
 the fix:
 ```js
+const a = 5;
 ```
-your notes:
+your notes: You must declare a variable in const keywords. 
 
 [TOP](#variable-errors)
 
@@ -43,15 +44,17 @@ a = 0;
 ```
 error message:
 ```
+TypeError: Assignment to constant variable.
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
-
+* creation phase or execution phase 
+* syntax 
 the fix:
 ```js
+var a = 9;
+a = 0;
 ```
-your notes:
+your notes: Const keywords cannot be reassigned.
 
 [TOP](#variable-errors)
 
@@ -67,15 +70,17 @@ a = 0;
 ```
 error message:
 ```
+SyntaxError: Missing initializer in const declaration.
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* creation phase or execution phase 
+* syntax 
 
 the fix:
 ```js
+const a = 0;
 ```
-your notes:
+your notes: JavaScript const variables must be assigned a value when they are declared.
 
 [TOP](#variable-errors)
 
