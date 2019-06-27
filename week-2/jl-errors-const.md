@@ -22,7 +22,7 @@ error message:
 SyntaxError: Unexpected token =
 ```
 classification:
-* creation phase or execution phase 
+* creation phase  
 * syntax
 
 the fix:
@@ -48,8 +48,8 @@ error message:
 TypeError: Assignment to constant variable.
 ```
 classification:
-* creation phase or execution phase 
-* syntax 
+* execution phase 
+* semanitc
 
 the fix:
 ```js
@@ -75,7 +75,7 @@ error message:
 SyntaxError: Missing initializer in const declaration.
 ```
 classification:
-* creation phase or execution phase 
+* creation phase  
 * syntax 
 
 the fix:
