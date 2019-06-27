@@ -13,7 +13,7 @@ The answer: 1 Because every loop iteration decreases i by 1. The check while(i) 
 ```
 ## 2.Which values does the while loop show?
 ```js
--The prefix form ++i:
+⋅⋅* The prefix form ++i:
 
 let i = 0;
 while (++i < 5) alert( i );                       
@@ -22,7 +22,7 @@ alert( 1 )
 
 The answer:
 
--The postfix form i++:
+⋅⋅* The postfix form i++:
 
 let i = 0;
 while (i++ < 5) alert( i );
