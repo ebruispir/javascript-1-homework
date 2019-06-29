@@ -53,13 +53,11 @@ _2= _1, _1 = x, _3 = y, _4 ="l",_5="";
 ```
 1. [many men may melt my mind](http://www.pythontutor.com/javascript.html#code=//%20many%20men%20may%20melt%20my%20mind%0A%0A//%20we%20give%20you%20this%0Alet%20_1%20%3D%20'%20',%20_2%20%3D%20'%20',%20_3%20%3D%20'%20',%20_4%20%3D%20'%20'%3B%0Alet%20x,%20y%3B%0A//%20--%20you%20write%20this%20--%0A%0A//%20many%0A%0A//%20men%0A%0A//%20may%0A%0A//%20melt%0A%0A//%20my%0A%0A//%20mind&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-// many men may melt my mind
-
 let _1 = ' ', _2 = ' ', _3 = ' ', _4 = ' ';
-let x="", y=";
+let x="", y="";
 
 // many
-_1 = "m", _2 = "m", _3 = "n", _4 = "y";
+_1 = "m", _2 = "a", _3 = "n", _4 = "y";
 // men
 x=_2, y=_4;
 _2 ="e",_4 = "";
@@ -71,7 +69,7 @@ _2= y, _3= "l",_4 = "t";
 // my
 _2= x,_3 = "", _4 = "";
 // mind
-_2 = "i", _3 = "n", _4 = "d"
+_2 = "i", _3 = "n", _4 = "d""
 ```
 
 1. [if fir trees ever fall](https://goo.gl/BCC6pz)
