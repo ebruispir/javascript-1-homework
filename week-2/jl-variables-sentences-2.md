@@ -74,13 +74,8 @@ _2 = "i", _3 = "n", _4 = "d";
 
 1. [if fir trees ever fall](https://goo.gl/BCC6pz)
 ```js
-// if fir trees ever fall
-
-// we give you this
 let _1 = ' ', _2 = ' ', _3 = ' ', _4 = ' ', _5 = ' ';
 let x = ' ', y = ' ';
-
-// -- you write this --
 
 // if
 _1 = "i", _2 = "f"
