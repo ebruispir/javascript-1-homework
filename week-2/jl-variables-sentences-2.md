@@ -69,7 +69,7 @@ _2= y, _3= "l",_4 = "t";
 // my
 _2= x,_3 = "", _4 = "";
 // mind
-_2 = "i", _3 = "n", _4 = "d""
+_2 = "i", _3 = "n", _4 = "d";
 ```
 
 1. [if fir trees ever fall](https://goo.gl/BCC6pz)
