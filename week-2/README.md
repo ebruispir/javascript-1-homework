@@ -12,7 +12,7 @@
 | :seedling: __[janke: errors objects](./jl-errors-objects.md) |:white_check_mark: | | | |
 | :seedling: __[javascript.info: objects](./jsinfo-objects.md) |:white_check_mark:  | | | |
 | :dash: __[janke: reference types](./jl-reference-types.md) | :white_check_mark:| | | |
-| :fire: __[janke: ref-type arguments](./jl-functions-ref-type-args.md) | | | | |
+| :fire: __[janke: ref-type arguments](./jl-functions-ref-type-args.md) |:white_check_mark: | | | |
 | :dash: __[janke: sentences w/o temps](./jl-variables-sentences-1.md) | :white_check_mark:| | | |
 | :fire: __[janke: sentences w/ temps](./jl-variables-sentences-2.md) |:white_check_mark: | | | |
 
