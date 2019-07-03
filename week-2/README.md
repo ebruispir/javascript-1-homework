@@ -3,7 +3,7 @@
 |  | your Emoji | your comments | coach emoji | coach comments |
 | --- | --- | --- | --- | --- |
 | :seedling: __[fcc: finish js basics](./fcc-basic-js-pt-2.md) |:white_check_mark:| | | |
-| :dash: __[janke: tracing conditionals](./js-tracing-conditionals.md) | | | | |
+| :dash: __[janke: tracing conditionals](./js-tracing-conditionals.md) |:white_check_mark: | In the questions 7 and 8, the the value of the 'path' variable is 'undefined' at the end. It is because of the nested if statements. I couldn't figure out how to assign a value to the 'path' variable at the end.| | |
 | :seedling: __[javascript.info: loops](./jsinfo-loops.md) |:white_check_mark: |some of the questions were difficult so i needed to check the solutions.But i understood how they work. | | |
 | :dash: __[janke: loop refactors](./jl-loop-refactors.md) |:white_check_mark: | | | |
 | :seedling: __[fcc: data structures](./fcc-data-structures.md) |:white_check_mark:| | | |
