@@ -669,15 +669,50 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x = , y = ; // try a bunch of values!
 
+const expression_1 = x || y;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = x !== y;
+const truthiness_2 = Boolean(expression_2);
+
+const expression_3 = x && y;
+const truthiness_3 = Boolean(expression_3);
+let path;
+
+if (truthiness_1) {
+  if (truthiness_2) {
+  path="if if";
+  }
+} else if (truthiness_3) {
+  if (truthiness_2) {
+   path="else if else" ;
+  }
+} else {
+  if (truthiness_2) {
+   path="else if"; 
+  }
+}
+
+console.log("x: " + typeof x + ", " + x);
+console.log("y: " + typeof y + ", " + y);
+console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+console.log("THIRD EXP: ", typeof expression_3+", "+expression_3+", "+truthiness_3+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: false, y: true, path: "if if"
+x: false, y: false, path: "undefined"
+x: null, y: false, path: "else if"
+x: NaN, y: null, path: "else if"
+x: Infinity, y: "", path: "if if"
+x: null, y: null, path: "undefined"
+// I think "else if else" is unreachable!
 ```
 
 
@@ -713,15 +748,48 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x =false , y = false; // try a bunch of values!
 
+const expression_1 = x !== y;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = x || y;
+const truthiness_2 = Boolean(expression_2);
+
+const expression_3 = x && y;
+const truthiness_3 = Boolean(expression_3);
+let path;
+
+
+
+if (truthiness_1) {
+    if (truthiness_2) {
+      path="if if"
+    } else if (truthiness_3) {
+    path="else if"
+    } else {
+    path="else"
+    }
+}
+
+console.log("x: " + typeof x + ", " + x);
+console.log("y: " + typeof y + ", " + y);
+console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+console.log("THIRD EXP: ", typeof expression_3+", "+expression_3+", "+truthiness_3+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: true, y: true, path: "undefined"
+x: true, y: false, path: "if if"
+x: "", y: undefined, path: "else"
+x: NaN, y: null, path: "else"
+x: Infinity, y: Infinity, path: "undefined"
+x: 1, y: null, path: "if if"
+// I think "else if " is unreachable!
 ```
 
 
