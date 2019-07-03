@@ -230,30 +230,30 @@ __Fill in the Blanks__
 [on pytut](http://www.pythontutor.com/live.html#code=%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%20!%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_1%5B1%5D%20%3D%3D%3D%20arr_2%5B1%5D%29%3B%0Aconsole.assert%28arr_1%5B1%5D%20%3D%3D%3D%20'B'%29%0A%0Alet%20key%20%3D%200%3B%0Aconsole.assert%28arr_1%5Bkey%5D%20%3D%3D%3D%20arr_2%5Bkey%5D%29%3B%0Aconsole.assert%28arr_1%5Bkey%5D%20%3D%3D%3D%20'A'%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%5Barr_2%5B2%5D%5D%20%3D%3D%3D%20arr_2%5Barr_1%5B2%5D%5D%29%3B%0Aconsole.assert%28arr_1%5Barr_2%5B2%5D%5D%20%3D%3D%3D%20'B'%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%20%3D%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_3%20!%3D%3D%20arr_1%29%3B%0Aconsole.assert%28arr_3%20!%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_3%5Bkey%5D%20%3D%3D%3D%20arr_1%5B0%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_3%5B1%5D%20%3D%3D%3D%20obj_2%5Bkey%5D%29%3B&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-      ; // write this line
-      ; // write this line
-  console.assert(arr_1 !== arr_2);
-  console.assert(arr_1[1] === arr_2[1]);
-  console.assert(arr_1[1] === 'B')
+   let arr_1=["A","B"] ; // write this line
+   let arr_2=["A","B"] ; // write this line
+   console.assert(arr_1 !== arr_2);
+   console.assert(arr_1[1] === arr_2[1]);
+   console.assert(arr_1[1] === 'B')
 
-  let key = 0;
-  console.assert(arr_1[key] === arr_2[key]);
-  console.assert(arr_1[key] === 'A');
+   let key = 0;
+   console.assert(arr_1[key] === arr_2[key]);
+   console.assert(arr_1[key] === 'A');
 
-      ; // write this line
-      ; // write this line
-  console.assert(arr_1[arr_2[2]] === arr_2[arr_1[2]]);
-  console.assert(arr_1[arr_2[2]] === 'B');
+   arr_1[2]= 1 ; // write this line
+   arr_2[2]= 1 ; // write this line
+   console.assert(arr_1[arr_2[2]] === arr_2[arr_1[2]]);
+   console.assert(arr_1[arr_2[2]] === 'B');
 
-      ; // write this line
-      ; // write this line
-  console.assert(arr_1 === arr_2);
-  console.assert(arr_3 !== arr_1);
-  console.assert(arr_3 !== arr_2);
-  console.assert(arr_3[key] === arr_1[0]);
+   arr_1 = arr_2 ; // write this line
+   let arr_3 = ["A"] ; // write this line
+   console.assert(arr_1 === arr_2);
+   console.assert(arr_3 !== arr_1);
+   console.assert(arr_3 !== arr_2);
+   console.assert(arr_3[key] === arr_1[0]);
 
-      ; // write this line
-  console.assert(obj_3[1] === obj_2[key]);
+   let obj_3 ={1:""} , obj_2={0:""}; // write this line
+   console.assert(obj_3[1] === obj_2[key]);
 }
 ```
 
@@ -267,23 +267,23 @@ __Complete the Assertions__
 [on pytut](http://www.pythontutor.com/javascript.html#code=let%20a_1%20%3D%20%7B%7D%3B%0Alet%20a_2%20%3D%20a_1%3B%0Aconsole.assert%28a_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20a_2%29%3B%0A%0Alet%20b_1%20%3D%20%7B%7D%3B%0Alet%20b_2%20%3D%20%7B%7D%3B%0Aconsole.assert%28b_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20b_2%29%3B%0A%0A//%20---%0A%0Alet%20a_1.x%20%3D%203%3B%0Alet%20a_2.x%20%3D%203%3B%0Aconsole.assert%28a_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20a_2%29%3B%0A%0Alet%20b_1.x%20%3D%205%3B%0Alet%20b_2.x%20%3D%205%3B%0Aconsole.assert%28b_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20b_2%29%3B%0A%0A&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
 {
-  let a_1 = {};
-  let a_2 = a_1;
-  console.assert(a_1 /* === or !== ? */ a_2);
+let a_1 = {};
+let a_2 = a_1;
+console.assert(a_1 === a_2);
 
-  let b_1 = {};
-  let b_2 = {};
-  console.assert(b_1 /* === or !== ? */ b_2);
+let b_1 = {};
+let b_2 = {};
+console.assert(b_1 !== b_2);
 
-  // ---
+// ---
 
-  let a_1.x = 3;
-  let a_2.x = 3;
-  console.assert(a_1 /* === or !== ? */ a_2);
+a_1.x = 3;
+a_2.x = 3;
+console.assert(a_1 === a_2);
 
-  let b_1.x = 5;
-  let b_2.x = 5;
-  console.assert(b_1 /* === or !== ? */ b_2);
+b_1.x = 5;
+b_2.x = 5;
+console.assert(b_1 !== b_2);
 }
 ```
 
@@ -293,23 +293,23 @@ __Complete the Assertions__
 {
   let a_1 = {};
   let a_2 = a_1;
-  console.assert(a_1 /* === or !== ? */ a_2);
+  console.assert(a_1 === a_2);
 
   let b_1 = {};
   let b_2 = {};
-  console.assert(b_1 /* === or !== ? */ b_2);
+  console.assert(b_1 !== b_2);
 
   // ---
-
+  
   const key = "x";
 
-  let a_1[key] = 3;
-  let a_2[key] = 3;
-  console.assert(a_1 /* === or !== ? */ a_2);
+  a_1[key] = 3;
+  a_2[key] = 3;
+  console.assert(a_1 === a_2);
 
-  let b_1[key] = 5;
-  let b_2[key] = 5;
-  console.assert(b_1 /* === or !== ? */ b_2);
+  b_1[key] = 5;
+  b_2[key] = 5;
+  console.assert(b_1 !== b_2);
 }
 ```
 
@@ -317,28 +317,28 @@ __Fill in the Blanks__
 [on pytut](http://www.pythontutor.com/live.html#code=%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_1%20!%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_1.x%20%3D%3D%3D%20obj_2.x%29%3B%0Aconsole.assert%28obj_1.x%20%3D%3D%3D%20%22a%22%29%3B%0A%0Alet%20key%20%3D%20%22y%22%3B%0Aconsole.assert%28obj_1%5Bkey%5D%20%3D%3D%3D%20obj_2%5Bkey%5D%29%3B%0Aconsole.assert%28obj_1%5Bkey%5D%20%3D%3D%3D%20'x'%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_1%5Bobj_2.y%5D%20%3D%3D%3D%20obj_2%5Bobj_1.y%5D%29%3B%0Aconsole.assert%28obj_1%5Bobj_2.y%5D%20%3D%3D%3D%20obj_1%5B'x'%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_1%20%3D%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_3%20!%3D%3D%20obj_1%29%3B%0Aconsole.assert%28obj_3%20!%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_3%5Bkey%5D%20%3D%3D%3D%20obj_1.y%29%3B%0Aconsole.assert%28obj_3%5B'x'%5D%20%3D%3D%3D%20key%29%3B&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-       ; // write this line
-       ; // write this line    ; // write this line
-   console.assert(obj_1 !== obj_2);
-   console.assert(obj_1.x === obj_2.x);
-   console.assert(obj_1.x === "a");
+let obj_1 = {x:'a',y:'x'}; // write this line
+let obj_2 = {x:'a',y:'x'}; // write this line  
+console.assert(obj_1 !== obj_2);
+console.assert(obj_1.x === obj_2.x);
+console.assert(obj_1.x === "a");
 
-   let key = "y";
-   console.assert(obj_1[key] === obj_2[key]);
-   console.assert(obj_1[key] === 'x');
+let key = "y";
+console.assert(obj_1[key] === obj_2[key]);
+console.assert(obj_1[key] === 'x');
 
-       ; // write this line
-       ; // write this line
-   console.assert(obj_1[obj_2.y] === obj_2[obj_1.y]);
-   console.assert(obj_1[obj_2.y] === obj_1['x']);
+obj_1.y = 'x' ;    ; // write this line
+obj_2.y = 'x' ;    ; // write this line
+console.assert(obj_1[obj_2.y] === obj_2[obj_1.y]);
+console.assert(obj_1[obj_2.y] === obj_1['x']);
 
-       ; // write this line
-       ; // write this line
-   console.assert(obj_1 === obj_2);
-   console.assert(obj_3 !== obj_1);
-   console.assert(obj_3 !== obj_2);
-   console.assert(obj_3[key] === obj_1.y);
-   console.assert(obj_3['x'] === key);
+obj_1 = obj_2; // write this line
+let obj_3 = {y: 'x', x: 'y'}    ; // write this line
+console.assert(obj_1 === obj_2);
+console.assert(obj_3 !== obj_1);
+console.assert(obj_3 !== obj_2);
+console.assert(obj_3[key] === obj_1.y);
+console.assert(obj_3['x'] === key);
 }
 ```
 
@@ -359,6 +359,9 @@ __Swap 'em__
   // swap the values stored in each structure
   //  using dot notation for the object
   //  using direct access for the array
+  _ = obj.prop;
+  obj.prop = arr[0];
+  arr[0] = _;
 }
 ```
 
@@ -371,8 +374,8 @@ __Swap 'em__
   let _ = null;
 
   // fill in these blanks
-  const obj_key = ;
-  const arr_index = ;
+  const obj_key = obj[prop];
+  const arr_index = arr[0] ;
   
   _ = arr[arr_index];
   arr[arr_index] = obj[obj_key];
@@ -387,25 +390,25 @@ __Relative vs Absolute__
 [on pytut](http://www.pythontutor.com/javascript.html#code=//%20array%20indices%20are%20relative%0Aconst%20arr%20%3D%20%5B%22a%22,%20%22b%22%5D%3B%0Aconst%20index%20%3D%200%3B%0A%0Aconst%20read_arr_1%20%3D%20arr%5Bindex%5D%3B%0Aarr.shift%28%29%3B%20//%20removes%20the%20first%20item%0Aconst%20read_arr_2%20%3D%20arr%5Bindex%5D%3B%0A%0Aconsole.assert%28read_arr_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20read_arr_2%29%3B%0A%0A//%20object%20keys%20are%20absolute%0Aconst%20obj%20%3D%20%7Bx%3A%20%22a%22,%20y%3A%20%22b%22%7D%3B%0Aconst%20key%20%3D%20%22y%22%3B%0A%0Aconst%20read_obj_1%20%3D%20obj%5Bkey%5D%3B%0Adelete%20obj.x%3B%0Aconst%20read_obj_2%20%3D%20obj%5Bkey%5D%3B%0A%0Aconsole.assert%28read_obj_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20read_obj_2%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
 ```js
 {
-  // array indices are relative
-  const arr = ["a", "b"];
-  const index = 0;
+// array indices are relative
+const arr = ["a", "b"];
+const index = 0;
 
-  const read_arr_1 = arr[index];
-  arr.shift(); // removes the first item
-  const read_arr_2 = arr[index];
+const read_arr_1 = arr[index];
+arr.shift(); // removes the first item
+const read_arr_2 = arr[index];
 
-  console.assert(read_arr_1 /* === or !== ? */ read_arr_2);
+console.assert(read_arr_1  !== read_arr_2);
 
-  // object keys are absolute
-  const obj = {x: "a", y: "b"};
-  const key = "y";
+// object keys are absolute
+const obj = {x: "a", y: "b"};
+const key = "y";
 
-  const read_obj_1 = obj[key];
-  delete obj.x;
-  const read_obj_2 = obj[key];
+const read_obj_1 = obj[key];
+delete obj.x;
+const read_obj_2 = obj[key];
 
-  console.assert(read_obj_1 /* === or !== ? */ read_obj_2);
+console.assert(read_obj_1 === read_obj_2);
 }
 ```
 
