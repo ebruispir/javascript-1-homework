@@ -249,8 +249,12 @@ _original for loop_
 _refactor to while_
 ```js
 {
-  while () {
-
+let result = 0;
+let i =1;
+  while (i<10) {
+    result += i;
+    console.log(i);
+    i += result
   }
 }
 ```
@@ -275,9 +279,11 @@ _original for loop_
 _refactor to while_
 ```js
 {
-  while () {
-
-  }
+let i = -3;
+while (i === 10 || i< 20 ) {
+   console.log(i);
+   i *= -1.5;
+}
 }
 ```
 
@@ -303,10 +309,12 @@ _original for loop_
 _refactor to while_
 ```js
 {
-  while () {
-
-  }
-}
+let i = 0, j = 10;
+while (i !== j) {
+  console.log("i: ", i);
+  console.log("j: ", j);
+  console.log("i + j: ", i + j);
+  i++, j--;
 ```
 
 [parsonized solution](https://janke-learning.github.io/parsonizer/?snippet=let%20i%20%3D%200%2C%20j%20%3D%2010%3B%0Awhile%20%28%20i%20!%3D%3D%20j%20%29%20%7B%0A%20%20console.log%28%22i%3A%20%22%2C%20i%29%3B%0A%20%20console.log%28%22j%3A%20%22%2C%20j%29%3B%0A%20%20console.log%28%22i%20%2B%20j%3A%20%22%2C%20i%20%2B%20j%29%3B%0A%20%20i%2B%2B%2C%20j--%3B%0A%7D)
@@ -335,9 +343,13 @@ _original for loop_
 _refactor to while_
 ```js
 {
-  while () {
-
-  }
+const mixitup = false;
+let val;
+let i = '';
+while (!!i !== true ) {
+  val = !i || mixitup * i;
+  console.log(!!val);
+  i = +val;
 }
 ```
 
@@ -370,9 +382,9 @@ _original while loop_
 _refactor to for_
 ```js
 {
-  for ( ; ; ) {
-
-  }
+for ( let x = 9; x > 2; x--) {
+  console.log(x * 3);
+}
 }
 ```
 
@@ -398,9 +410,9 @@ _original while loop_
 _refactor to for_
 ```js
 {
-  for ( ; ; /* nothing goes here */ ) {
-
-  }
+for (let x = 9 ; x++ < 20; /* nothing goes here */ ) {
+   console.log(x);
+}
 }
 ```
 
@@ -427,9 +439,9 @@ _original while loop_
 _refactor to for_
 ```js
 {
-  for ( ; x <  ; x += 1 ) {
-
-  }
+for (let x = 10 ; x<=20 ; x += 1 ) {
+  console.log(x);
+}
 }
 ```
 
@@ -455,9 +467,9 @@ _original while loop_
 _refactor to for_
 ```js
 {
-  for ( ;  ;  ) {
-
-  }
+for (let x = 10; x < 20; x += 1 ) {
+   console.log(x);
+}
 }
 ```
 
