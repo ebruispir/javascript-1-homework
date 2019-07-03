@@ -70,6 +70,3 @@ if (userName == 'Admin') {
   alert( "I don't know you" );
 }
 ```
-## 1.
-```js
-```
