@@ -256,15 +256,32 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x = 0 ; // try a bunch of values
 
+const expression = x === +x || x === !x;
+const truthiness = Boolean(expression);
+let path;
+
+ if ( truthiness ) {
+    path = "if";
+  } else {
+    path = "else";
+}
+
+console.log("x: " + typeof x + ", " + x);
+console.log("EXP: ", typeof expression+", "+expression +", "+truthiness+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: 0 , path: "if "
+x:false , path: "else"
+x:true , path: "else"
+x:" " ,  path: "else"
+x:NaN , path: "else"
+x: 1 , path: "if"
 ```
 
 
@@ -296,15 +313,34 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x =  ; // try a bunch of values!
 
+const expression_1 = x === +x;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = x === !x;
+const truthiness_2 = Boolean(expression_2);
+let path;
+
+if (truthiness_1) {
+   path = "if";
+} else if (truthiness_2) {
+   path ="else if";
+} else {
+   path ="else";
+}
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: 0 , path: "if "
+x:false , path: "else"
+x:true , path: "else"
+x:null ,  path: "else"
+x:NaN , path: "else"
+x: 1 , path: "if"
+// I think "else if"  unreachable!
 ```
 
 
@@ -337,15 +373,42 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x =  ; // try a bunch of values!
 
+const expression_1 = x == +x;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = x == !!x;
+const truthiness_2 = Boolean(expression_2);
+
+let path;
+
+if (truthiness_1) {
+path="if"
+
+} else if (truthiness_2) {
+path="if else"
+
+} else { 
+path="else"
+
+}
+console.log("x: " + typeof x + ", " + x);
+console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: 0 , path: "if "
+x:NaN , path: "else"
+x:undefined , path: "else"
+x:Infinity ,  path: "if"
+x:true , path: "if"
+x: "" , path: "if"
+// I think "else if"  unreachable!
 ```
 
 
@@ -383,15 +446,46 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x = , y = ; // try a bunch of values!
 
+const expression_1 = x ;
+const truthiness_1 = Boolean(expression_1);
+const expression_2 = y;
+const truthiness_2 = Boolean(expression_2);
+
+let path;
+
+if (truthiness_1) {
+  if (truthiness_2) {
+ path = "if if"
+  } else {
+    path = "if else"
+  }
+} else {
+  if (truthiness_2) {
+    path = "else if"
+  } else {
+    path = "else else"
+  }
+}
+
+console.log("x: " + typeof x + ", " + x);
+console.log("y: " + typeof y + ", " + y);
+console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: 1, y: 0, path: "if else"
+x: true, y: true, path: "if if"
+x: false, y: false, path: "else else"
+x: false, y: true , path: "else if"
+x: null, y: undefined, path: "else else"
+x: 1, y: undefined, path: "if else"
+x: true, y: 1, path: "if if"
 ```
 
 
@@ -423,15 +517,40 @@ __original code__
 __refactored and traced__
 ```js
 {
+const x = 1, y = 1; // try a bunch of values!
 
+const expression_1 = !x || !y;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = !(x && y);
+const truthiness_2 = Boolean(expression_2);
+let path;
+
+if (truthiness_1  ) {
+  path="if"
+} else if (truthiness_2 ) {
+  path="else if"
+} else { 
+  path="else"
+}
+
+  console.log("x: " + typeof x + ", " + x);
+  console.log("y: " + typeof y + ", " + y);
+  console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+  console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+  console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: false, y: false, path: "if"
+x: true, y: true, path: "else"
+x: NaN, y:null, path: "if"
+x: Infinity, y: Infinity, path: "else"
+x: 0, y: "", path: "if"
+x: 1, y: 1, path: "else"
+// I think "if else" is unreachable!
 ```
 
 > [De Morgan's Law](https://www.youtube.com/watch?v=tKnS3s8fOu4)
@@ -472,15 +591,46 @@ __original code__
 __refactored and traced__
 ```js
 {
-  // can you remove on conditional statement without changing the bahavior?
+ const x = 1 , y = 0 ; // try a bunch of values!
+
+const expression_1 = x;
+const truthiness_1 = Boolean(expression_1);
+
+const expression_2 = y;
+const truthiness_2 = Boolean(expression_2);
+let path;
+
+if (x) {
+  if (y) {
+  path="if if"
+  } else {
+    path="if else"  
+  }
+} else {
+  if (x) {
+    path ="else if"
+  } else {
+    path="else else"
+  }
+}
+
+console.log("x: " + typeof x + ", " + x);
+console.log("y: " + typeof y + ", " + y);
+console.log("FIRST EXP: ", typeof expression_1+", "+expression_1+", "+truthiness_1+"y");
+console.log("SECOND EXP: ", typeof expression_2+", "+expression_2+", "+truthiness_2+"y");
+console.log("PATH: ", path);
 }
 ```
 
 __some tracings__
 ```js
-// find 6+ tracing values
-// try to find at least 1 set for each path
-// or can you? some paths are unreachable!
+x: null, y: null, path: "else else"
+x: true, y: null, path: " if else"
+x: true, y:true, path: "if if"
+x: 0, y: Infinity, path: "else else"
+x: NaN, y: undefined, path: "else else"
+x: 1, y: 0, path: "if else"
+// I think "else if" is unreachable!
 ```
 
 
