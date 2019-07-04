@@ -63,6 +63,3 @@ let message = (login == "Employee") ? "Hello" :
 (login == "") ? "No login" :
  "" ;
 ```
-## 6.
-```js
-```
